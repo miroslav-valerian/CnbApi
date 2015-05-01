@@ -23,8 +23,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Valerian\\CnbApi": "src/",
-			"Valerian\\Curl": "src/"
+			"Valerian": "src/"
 		}
 	}
 }
