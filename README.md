@@ -1,0 +1,2 @@
+# CnbApi
+ČNB exchange rates
