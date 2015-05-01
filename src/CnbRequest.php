@@ -1,14 +1,15 @@
 <?php
 
-namespace Cnb;
-
-use Valerian\Curl\Request;
 /**
  * Request
  * 
  * @author Ing. Miroslav Valerián <info@miroslav-valerian.cz>
  * 
  */
+
+namespace Valerian\Cnb;
+
+use Valerian\Curl\Request;
 
 class CnbRequest extends Request
 {
