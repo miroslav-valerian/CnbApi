@@ -1,0 +1,29 @@
+{
+	"name": "valerian/cnbapi",
+	"type": "library",
+	"description": "ČNB exchange rates",
+	"keywords": ["čnb", "cnb", "exchange rate"],
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Miroslav Valerian",
+			"homepage": "http://www.miroslav-valerian.cz",
+			"email": "info@miroslav-valerian.cz"
+		}
+	],
+	"support": {
+		"email": "info@miroslav-valerian.cz",
+		"issues": "https://github.com/miroslav-valerian/Curl/issues"
+	},
+	"require": {
+		"valerian/curl": "dev-master"
+	},
+	"require-dev": {
+		"valerian/curl": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"Valerian\\CnbApi": "src/"
+		}
+	}
+}
