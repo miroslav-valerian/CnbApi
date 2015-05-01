@@ -22,8 +22,6 @@
 		"valerian/curl": "dev-master"
 	},
 	"autoload": {
-		"psr-0": {
-			"Valerian\\CnbApi": "src/"
-		}
-	}
+		"classmap": ["src/"]
+	},
 }
