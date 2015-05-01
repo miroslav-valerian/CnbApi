@@ -1,13 +1,6 @@
 <?php
 
-include 'Curl/Request.php';
-include 'Curl/Response.php';
-include 'Curl/Exceptions.php';
-include 'CnbRequest.php';
-include 'CnbResponse.php';
-include 'CnbCurrency.php';
-
-$request = new \Cnb\CnbRequest();
+$request = new Valerian\Cnb\CnbRequest();
 $response = $request->get();
 
 //Get all downloaded currencies
