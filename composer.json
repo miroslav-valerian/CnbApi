@@ -1,8 +1,8 @@
 {
 	"name": "valerian/cnbapi",
 	"type": "library",
-	"description": "ČNB exchange rates",
-	"keywords": ["čnb", "cnb", "exchange rate"],
+	"description": "CNB exchange rates",
+	"keywords": ["cnb", "exchange rate"],
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
 		{
