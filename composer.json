@@ -22,7 +22,7 @@
 		"valerian/curl": "dev-master"
 	},
 	"autoload": {
-		"psr-0": {
+		"psr-4": {
 			"Valerian\\CnbApi\\": "src/"
 		}
 	}
