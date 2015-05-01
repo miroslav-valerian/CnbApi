@@ -1,6 +1,6 @@
 <?php
 
-$request = new Valerian\Cnb\CnbRequest();
+$request = new Valerian\CnbApi\CnbRequest();
 $response = $request->get();
 
 //Get all downloaded currencies

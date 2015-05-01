@@ -23,7 +23,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Valerian\\Cnb": "src/"
+			"Valerian\\CnbApi\\": "src/"
 		}
 	}
 }

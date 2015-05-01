@@ -7,7 +7,7 @@
  * 
  */
 
-namespace Valerian\Cnb;
+namespace Valerian\CnbApi;
 
 use SimpleXMLElement;
 
