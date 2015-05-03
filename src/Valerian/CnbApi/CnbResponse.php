@@ -31,9 +31,9 @@ class Response
 	
 	/**
 	 * 
-	 * @param \Curl\Response $response
+	 * @param \Valerian\Curl\Response $response
 	 */
-	public function __construct(\Curl\Response $response)
+	public function __construct(\Valerian\Curl\Response $response)
 	{
     	$this->response = $response;
 		$this->xml = new SimpleXMLElement($this->response->getResponse());
