@@ -22,6 +22,8 @@
 		"valerian/curl": "dev-master"
 	},
 	"autoload": {
-		"classmap": ["src/"]
+		"psr-4": {
+			"Valerian\\": "src/"
+		}
 	}
 }
