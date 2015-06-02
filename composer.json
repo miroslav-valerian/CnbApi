@@ -13,8 +13,9 @@
 	],
 	"support": {
 		"email": "info@miroslav-valerian.cz",
-		"issues": "https://github.com/miroslav-valerian/Curl/issues"
+		"issues": "https://github.com/miroslav-valerian/CnbApi/issues"
 	},
+	"version": "v0.1.0",
 	"require": {
 		"valerian/curl": "dev-master"
 	},
