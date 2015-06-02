@@ -13,7 +13,7 @@ use SimpleXMLElement;
 use Exception;
 use DateTime;
 
-class Response
+class CnbResponse
 {
 	private $response;
 	

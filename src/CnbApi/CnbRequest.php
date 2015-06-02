@@ -35,7 +35,7 @@ class CnbRequest extends Request
 	protected function send()
 	{
 		$response = parent::send();
-		$cnbResponse = new Response($response);
+		$cnbResponse = new CnbResponse($response);
 		return $cnbResponse;
 	}
 }
