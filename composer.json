@@ -18,11 +18,11 @@
 	"version": "v0.1.2",
 	"require": {
 		"php": ">=5.3.1",
-		"valerian/curl": "dev-master"
+		"valerian/curl": "dev-master@dev"
 	},
 	"require-dev": {
 		"php": ">=5.3.1",
-		"valerian/curl": "dev-master"
+		"valerian/curl": "dev-master@dev"
 	},
 	"autoload": {
 		"psr-4": {
