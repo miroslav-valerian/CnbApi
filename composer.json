@@ -15,14 +15,14 @@
 		"email": "info@miroslav-valerian.cz",
 		"issues": "https://github.com/miroslav-valerian/CnbApi/issues"
 	},
-	"version": "v0.1.5",
+	"version": "v0.1.6",
 	"require": {
 		"php": ">=5.3.1",
-		"valerian/curl": "0.1.0"
+		"valerian/curl": "~0.1"
 	},
 	"require-dev": {
 		"php": ">=5.3.1",
-		"valerian/curl": "0.1.0"
+		"valerian/curl": "~0.1"
 	},
 	"autoload": {
 		"psr-4": {
