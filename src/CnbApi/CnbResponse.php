@@ -35,8 +35,8 @@ class CnbResponse
 	 */
 	public function __construct(\Valerian\Curl\Response $response)
 	{
-    		$this->response = $response;
-		$this->xml = new SimpleXMLElement(str_replace(',', '.', $this->response->getResponse()));
+		$this->response = $response;
+		$this->xml = new SimpleXMLElement($this->response->getResponse());
 	}
 	
 	/**
@@ -90,8 +90,8 @@ class CnbResponse
 	
 	/**
 	 * 
-	 * @param type $code
-	 * @return \Valerian\Cnb\CnbCurrency
+	 * @param string $code
+	 * @return \Valerian\CnbApi\CnbCurrency
 	 * @throws Exception
 	 */
 	public function getCurrency($code)

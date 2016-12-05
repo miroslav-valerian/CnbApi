@@ -37,7 +37,7 @@ class CnbCurrency
 		$this->code = (string) $xml['kod'];
 		$this->currency = (string) $xml['mena'];
 		$this->amount = (int) $xml['mnozstvi'];
-		$this->exchangeRate = (float) $xml['kurz'];
+		$this->exchangeRate = (float) str_replace(',', '.', $xml['kurz']);
 		$this->country = (string) $xml['zeme'];
 	}
 	
@@ -67,7 +67,7 @@ class CnbCurrency
 	{
 		return $this->amount;
 	}
-
+	
 	/**
 	 * 
 	 * @return float
