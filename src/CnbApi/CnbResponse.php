@@ -2,106 +2,60 @@
 
 /**
  * Response
- * 
+ *
  * @author Ing. Miroslav Valerián <info@miroslav-valerian.cz>
- * 
+ *
  */
 
 namespace Valerian\CnbApi;
 
-use SimpleXMLElement;
+use function array_filter;
 use Exception;
-use DateTime;
+use function array_keys;
 
 class CnbResponse
 {
+
 	private $response;
-	
-	/** @var SimpleXMLElement */
-	private $xml;
-	
-	/** @var string */
-	private $bank;
-	
-	/** @var DateTime */
-	private $date;
-	
-	/** @var int */
-	private $order;
-	
+
+	private $data = [];
+
 	/**
-	 * 
+	 *
 	 * @param \Valerian\Curl\Response $response
 	 */
 	public function __construct(\Valerian\Curl\Response $response)
 	{
 		$this->response = $response;
-		$this->xml = new SimpleXMLElement($this->response->getResponse());
+		$rows = array_filter(explode("\n", $this->response->getResponse()));
+		array_shift($rows);
+		array_shift($rows);
+
+		foreach ($rows as $row => $data) {
+			$row_data = explode('|', $data);
+			$this->data[$row_data[3]] = array_combine(['zeme', 'mena', 'mnozstvi', 'kod', 'kurz'], $row_data);
+		}
 	}
-	
+
 	/**
-	 * 
-	 * @return string
-	 */
-	public function getXml()
-	{
-		return (string) $this->xml;
-	}
-	
-	/**
-	 * 
-	 * @return string
-	 */
-	public function getBank()
-	{
-		return (string) $this->xml['banka'];
-	}
-	
-	/**
-	 * 
-	 * @return DateTime
-	 */
-	public function getDate()
-	{
-		return new DateTime((string)$this->xml['datum']);
-	}
-	
-	/**
-	 * 
-	 * @return string
-	 */
-	public function getOrder()
-	{
-		return (string) $this->xml['poradi'];
-	}
-	
-	/**
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getCurrencies()
 	{
-		$code = array();
-		foreach ($this->xml->tabulka->radek as $line){
-			$code[] = (string) $line['kod'];
-		}
-		return $code;
+		return array_keys($this->data);
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param string $code
 	 * @return \Valerian\CnbApi\CnbCurrency
 	 * @throws Exception
 	 */
 	public function getCurrency($code)
 	{
-		$xmlCode = array();
-		foreach ($this->xml->tabulka->radek as $line){
-			$xmlCode = (string) $line['kod'];
-			if ($code == $xmlCode) {
-				return new CnbCurrency($line);
-			}
+		if ($this->data[$code]) {
+			return new CnbCurrency($this->data[$code]);
 		}
 		throw new Exception("Currency not exist");
 	}

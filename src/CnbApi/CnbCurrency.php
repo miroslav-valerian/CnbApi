@@ -32,7 +32,7 @@ class CnbCurrency
 	 * 
 	 * @param SimpleXMLElement $xml
 	 */
-	public function __construct(SimpleXMLElement $xml)
+	public function __construct(array $xml)
 	{
 		$this->code = (string) $xml['kod'];
 		$this->currency = (string) $xml['mena'];
